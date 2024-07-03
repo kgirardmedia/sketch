@@ -1,0 +1,19 @@
+
+#gridContainer {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+}
+
+.gridElement {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    background-color: white;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+}
