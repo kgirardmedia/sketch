@@ -16,6 +16,7 @@
     border: 1px;
     border-style: solid;
     border-color: lightgray;
+    filter: grayscale(0%);
 }
 
 button {

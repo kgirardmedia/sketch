@@ -1,6 +1,6 @@
 const gridContainer = document.getElementById("gridContainer")
-let gridBoxes = document.querySelectorAll(".gridElement")
 const buttons = document.querySelectorAll("button")
+let gridBoxes = document.querySelectorAll(".gridElement")
 let gridRows = 0;
 let gridSize = 0;
 let gridDimensions = 800
@@ -27,7 +27,6 @@ function setGridSize() {
         const gridElement = document.createElement("div");
         gridElement.style.width = (gridDimensions/gridRows) + "px";
         gridElement.style.height = (gridDimensions/gridRows) + "px";
-        console.log(gridElement.style.width)
         gridElement.classList.add("gridElement");
         gridElement.id = "box" + (i + 1);
         gridContainer.appendChild(gridElement);
@@ -37,7 +36,7 @@ function setGridSize() {
     gridBoxes = document.querySelectorAll(".gridElement")
     gridBoxes.forEach((gridElement) => {
         gridElement.addEventListener("mouseover", () => {
-            document.getElementById(gridElement.id).style.backgroundColor = "black";
+            document.getElementById(gridElement.id).style.backgroundColor = getRandomColor();
             document.getElementById(gridElement.id).style.borderStyle = "none";
         });
     });
