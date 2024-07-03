@@ -1,4 +1,7 @@
 
+body {
+    background-color: rgb(184, 184, 184);
+}
 #gridContainer {
     margin-left: auto;
     margin-right: auto;
@@ -6,9 +9,14 @@
     justify-content: center;
     flex-wrap: wrap;
     flex: 1 1 auto;
+    margin-bottom: 20px;
+    border: 3px;
+    border-style: solid;
+    border-color: rgb(44, 44, 44);
 }
 
 .gridElement {
+    --brightness: 1;
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
@@ -16,9 +24,22 @@
     border: 1px;
     border-style: solid;
     border-color: lightgray;
-    filter: grayscale(0%);
+    filter: brightness(--brightness);
 }
 
 button {
-    padding: 8px 16px;
+    padding: 16px 32px;
+    background-color: rgb(80, 80, 80);
+    font-weight: bold;
+    border-radius: 10px;
+    border-color: gray;
+    border-style: solid;
+    border: 10px;
+    color: white;
+}
+
+.ui {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }

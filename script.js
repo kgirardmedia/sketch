@@ -4,6 +4,7 @@ let gridBoxes = document.querySelectorAll(".gridElement")
 let gridRows = 0;
 let gridSize = 0;
 let gridDimensions = 800
+let darkness = 1;
 setGridSize();
 
 
@@ -36,6 +37,8 @@ function setGridSize() {
     gridBoxes = document.querySelectorAll(".gridElement")
     gridBoxes.forEach((gridElement) => {
         gridElement.addEventListener("mouseover", () => {
+            styles = getComputedStyle(gridElement);
+
             document.getElementById(gridElement.id).style.backgroundColor = getRandomColor();
             document.getElementById(gridElement.id).style.borderStyle = "none";
         });
