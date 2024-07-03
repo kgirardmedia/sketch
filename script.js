@@ -1,5 +1,9 @@
 const gridContainer = document.getElementById("gridContainer")
-let gridRows = 16;
+let gridRows = prompt("Please enter the amount of pixels you would like per row.");
+while (gridRows > 75) {
+    gridRows = prompt("Pixel amount cannot exceed 75. Please enter a smaller number.");
+}
+
 let gridSize = gridRows * gridRows;
 
 let gridDimensions = 800
@@ -17,13 +21,27 @@ function createGrid() {
     }
 }
 
+
+
+
 createGrid();
 
+
 const gridBoxes = document.querySelectorAll(".gridElement")
+const resetButton = document.querySelector(".resetButton")
 
 gridBoxes.forEach((gridElement) => {
     gridElement.addEventListener("mouseover", () => {
         document.getElementById(gridElement.id).style.backgroundColor = "black";
+        document.getElementById(gridElement.id).style.borderStyle = "none";
         console.log(gridElement.id);
     });
 });
+
+resetButton.addEventListener("click", () => {
+    gridBoxes.forEach((gridElement) => {
+        document.getElementById(gridElement.id).style.backgroundColor = "white";
+        document.getElementById(gridElement.id).style.borderStyle = "solid";
+        console.log("clicked");
+    })
+})
